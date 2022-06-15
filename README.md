@@ -2,6 +2,7 @@
 <h3 align="center">Desarrollado por <code>Alejandro Ruiz</code>, cursando <code>1º DAM</code></h3>
 <br>
 <code>Resumen del proyecto:</code>
+<br>
 <p>Se quiere desarrollar una aplicación en Java para registrar y listar libros de distintas editoriales. El registro consistirá en guardar los objetos de tipo libro en un fichero de objetos.</p>
 <p>En el fichero de objetos se guardarán los objetos de tipo libro y el código de la editorial. Para facilitar el registro de libros se proporcionará una interfaz gráfica diseñada con Java FX. Todos los datos anteriormente mencionados, deberán ser mostrados mediante una interfaz gráfica generada con SceneBuilder que posteriormente imprimiremos mediante las herramientas necesarias en Eclipse IDE.</p>
 <br>
