@@ -1,4 +1,4 @@
-<h1 align="center">👋, Proyecto programación.</h1>
+<h1 align="center">👋, Proyecto Biblioteca.</h1>
 <h3 align="center">Desarrollado por Alejandro Ruiz, clase 1º DAM</h3>
 <br>
 <code>Resumen del proyecto:</code>
