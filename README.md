@@ -1,5 +1,9 @@
 <h1 align="center">👋, Proyecto programación.</h1>
 <h3 align="center">Desarrollado por Alejandro Ruiz, clase 1º DAM</h3>
+<br>
+<code>Resumen del proyecto:</code>
+<p>Se quiere desarrollar una aplicación en Java para registrar y listar libros de distintas editoriales. El registro consistirá en guardar los objetos de tipo libro en un fichero de objetos.</p>
+<br>
 
 - ☕️ Proyecto desarrollado en [Java 11+](https://www.java.com/es/)
 
