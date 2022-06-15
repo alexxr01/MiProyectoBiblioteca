@@ -1,0 +1,92 @@
+package me.alejandro;
+
+/**
+ * Propiedades necesarias para un libro
+ * @author Alejandro Ruiz Bonillo
+ * @version 1.0
+ */
+
+import java.time.LocalDate;
+
+public class Libro {
+
+	private String ISBN;
+	private String titulo;
+	private String nombreAutores;
+	private LocalDate fechaEdicion;
+	private int numPaginas;
+	private int tipoEncuadernacion;
+	private Editorial editorial;
+	
+	public Libro() {
+		
+	}
+	
+	public Libro(String ISBN, String titulo, String nombreAutores, LocalDate fechaEdicion, int numPaginas,
+			int tipoEncuadernacion, Editorial editorial) {
+		this.ISBN = ISBN;
+		this.titulo = titulo;
+		this.nombreAutores = nombreAutores;
+		this.fechaEdicion = fechaEdicion;
+		this.numPaginas = numPaginas;
+		this.tipoEncuadernacion = tipoEncuadernacion;
+		this.editorial = editorial;
+	}
+	
+	/*
+	 * GETTERS AND SETTERS
+	 */
+	public String getISBN() {
+		return ISBN;
+	}
+	public String getTitulo() {
+		return titulo;
+	}
+	public String getNombreAutores() {
+		return nombreAutores;
+	}
+	public LocalDate getFechaEdicion() {
+		return fechaEdicion;
+	}
+	public int getNumPaginas() {
+		return numPaginas;
+	}
+	public int getTipoEncuadernacion() {
+		return tipoEncuadernacion;
+	}
+	public Editorial getEditorial() {
+		return editorial;
+	}
+	public void setISBN(String iSBN) {
+		ISBN = iSBN;
+	}
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
+	public void setNombreAutores(String nombreAutores) {
+		this.nombreAutores = nombreAutores;
+	}
+	public void setFechaEdicion(LocalDate fechaEdicion) {
+		this.fechaEdicion = fechaEdicion;
+	}
+	public void setNumPaginas(int numPaginas) {
+		this.numPaginas = numPaginas;
+	}
+	public void setTipoEncuadernacion(int tipoEncuadernacion) {
+		this.tipoEncuadernacion = tipoEncuadernacion;
+	}
+	public void setEditorial(Editorial editorial) {
+		this.editorial = editorial;
+	}
+	
+	/*
+	 * TO STRING
+	 */
+	@Override
+	public String toString() {
+		return "Libro [ISBN=" + ISBN + ", titulo=" + titulo + ", nombreAutores=" + nombreAutores + ", fechaEdicion="
+				+ fechaEdicion + ", numPaginas=" + numPaginas + ", tipoEncuadernacion=" + tipoEncuadernacion
+				+ ", editorial_=" + editorial + "]";
+	}
+
+}
