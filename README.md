@@ -1,5 +1,5 @@
 <h1 align="center">👋, Proyecto Biblioteca.</h1>
-<h3 align="center">Desarrollado por Alejandro Ruiz, clase 1º DAM</h3>
+<h3 align="center">Desarrollado por Alejandro Ruiz, cursando <code>1º DAM</code></h3>
 <br>
 <code>Resumen del proyecto:</code>
 <p>Se quiere desarrollar una aplicación en Java para registrar y listar libros de distintas editoriales. El registro consistirá en guardar los objetos de tipo libro en un fichero de objetos.</p>
