@@ -29,7 +29,7 @@ public class Ejecucion extends Application {
 			primaryStage.show();
 		} catch (IOException e) {
 			e.printStackTrace();
-			System.out.println("Hay algún error...");
+			System.out.println("A ocurrido algún error...");
 		}
 	}
 
