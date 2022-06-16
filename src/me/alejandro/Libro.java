@@ -14,7 +14,7 @@ public class Libro {
 	private String titulo;
 	private String nombreAutores;
 	private LocalDate fechaEdicion;
-	private int numPaginas;
+	private String numPaginas;
 	private int tipoEncuadernacion;
 	private Editorial editorial;
 	
@@ -22,7 +22,7 @@ public class Libro {
 		
 	}
 	
-	public Libro(String ISBN, String titulo, String nombreAutores, LocalDate fechaEdicion, int numPaginas,
+	public Libro(String ISBN, String titulo, String nombreAutores, LocalDate fechaEdicion, String numPaginas,
 			int tipoEncuadernacion, Editorial editorial) {
 		this.ISBN = ISBN;
 		this.titulo = titulo;
@@ -48,7 +48,7 @@ public class Libro {
 	public LocalDate getFechaEdicion() {
 		return fechaEdicion;
 	}
-	public int getNumPaginas() {
+	public String getNumPaginas() {
 		return numPaginas;
 	}
 	public int getTipoEncuadernacion() {
@@ -69,8 +69,8 @@ public class Libro {
 	public void setFechaEdicion(LocalDate fechaEdicion) {
 		this.fechaEdicion = fechaEdicion;
 	}
-	public void setNumPaginas(int numPaginas) {
-		this.numPaginas = numPaginas;
+	public void setNumPaginas(String string) {
+		this.numPaginas = string;
 	}
 	public void setTipoEncuadernacion(int tipoEncuadernacion) {
 		this.tipoEncuadernacion = tipoEncuadernacion;

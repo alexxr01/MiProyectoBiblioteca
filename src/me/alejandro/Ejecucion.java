@@ -27,10 +27,11 @@ public class Ejecucion extends Application {
 		FXMLLoader fxmlLoader = new FXMLLoader(Ejecucion.class.getResource("/me/alejandro/recursos/miproyectobiblioteca.fxml"));
 		Scene scene = new Scene(fxmlLoader.load());
 		
-		// Titulo e icono
+		// Titulo, icono y redimensionable
 		stage.setTitle(titulo + " - " + "v" + version);
 		Image iconoVentana = new Image("/me/alejandro/recursos/icono.png");
 		stage.getIcons().add(iconoVentana);
+		stage.setResizable(true);
 		
 		stage.setScene(scene);
 		stage.show();
