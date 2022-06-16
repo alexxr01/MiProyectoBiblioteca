@@ -1,5 +1,7 @@
 package me.alejandro;
 
+import java.io.IOException;
+
 /**
  * Ejecución del programa y propiedades relacionadas
  * @author Alejandro Ruiz Bonillo
@@ -8,33 +10,34 @@ package me.alejandro;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 public class Ejecucion extends Application {
+	private String titulo, version;
+	{
+		// Propidades básicas del programa
+		titulo = "Programa Biblioteca";
+		version = "1.3.10";
+	}
 	
 	@Override
-	public void start(Stage ventana) throws Exception {
-
-		Parent root = FXMLLoader.load(getClass().getResource("/me/alejandro/ventana/miproyectobiblioteca.fxml"));
+	public void start(Stage stage) throws IOException {
+		FXMLLoader fxmlLoader = new FXMLLoader(Ejecucion.class.getResource("/me/alejandro/recursos/miproyectobiblioteca.fxml"));
+		Scene scene = new Scene(fxmlLoader.load());
 		
-		Scene scene = new Scene(root);
+		// Titulo e icono
+		stage.setTitle(titulo + " - " + "v" + version);
+		Image iconoVentana = new Image("/me/alejandro/recursos/icono.png");
+		stage.getIcons().add(iconoVentana);
 		
-		ventana.setTitle("Programa Biblioteca");
-		
-		ventana.setMinHeight(100);
-		ventana.setMinWidth(200);
-		
-		ventana.setResizable(false); // Para indicar que no se puede redimencionar
-		
-		// Mostrar ventana
-		ventana.show();
-
+		stage.setScene(scene);
+		stage.show();
 	}
-
+	
 	public static void main(String[] args) {
-		launch(args);
+		launch();
 	}
 
 }
