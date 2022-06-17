@@ -85,7 +85,11 @@ public class FXMLDocumentController implements Serializable {
 	}
 	@FXML
 	private void limpiarRegistro(ActionEvent event) {
-
+		insertarisbn.clear();
+		insertartitulo.clear();
+		insertarautores.clear();
+		insertareditoriales.clear();
+		insertarnumerospaginas.clear();
 	}
 
 	public FXMLDocumentController() {
