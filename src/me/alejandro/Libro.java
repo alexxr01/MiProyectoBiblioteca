@@ -9,7 +9,6 @@ package me.alejandro;
 import java.time.LocalDate;
 
 public class Libro {
-
 	private String ISBN;
 	private String titulo;
 	private String nombreAutores;

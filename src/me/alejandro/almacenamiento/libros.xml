@@ -1,0 +1,16 @@
+<libros>
+	<libro>
+		<isbn>0-7645-2641-3</isbn>
+		<titulo>Programacion Java 8</titulo>
+		<autores>I.E.S Antonio Gala</autores>
+		<editorial>Anaya</editorial>
+		<numeropaginas>74</numeropaginas>
+	</libro>
+	<libro>
+		<isbn>0-2014-5941-6</isbn>
+		<titulo>Guia basica Eclipse IDE</titulo>
+		<autores>Eclipse Corporation</autores>
+		<editorial>Anaya</editorial>
+		<numeropaginas>35</numeropaginas>
+	</libro>
+</libros>

@@ -52,7 +52,7 @@
       <content>
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                <children>
-                  <Button fx:id="botonregistrarlibro" layoutX="455.0" layoutY="331.0" mnemonicParsing="false" text="Registrar un libro" />
+                  <Button fx:id="botonregistrarnuevolibro" layoutX="433.0" layoutY="331.0" mnemonicParsing="false" text="Registrar nuevo libro" />
                   <TableView fx:id="tablamostrarlibros" layoutX="15.0" layoutY="9.0" prefHeight="306.0" prefWidth="573.0">
                     <columns>
                       <TableColumn fx:id="columnamostrarisbn" prefWidth="107.0" text="ISBN" />
