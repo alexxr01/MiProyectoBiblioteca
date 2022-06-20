@@ -1,4 +1,4 @@
-package me.alejandro;
+package me.alejandro.recursos;
 
 /**
  * Clase por la cual aplicaremos las acciones a realizar
@@ -10,6 +10,9 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
+import java.time.LocalDate;
+
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -18,6 +21,8 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
+import me.alejandro.Libro;
 
 public class FXMLDocumentController implements Serializable {
 	private final String mensajeError = "Ha ocurrido algún error...";
@@ -42,9 +47,9 @@ public class FXMLDocumentController implements Serializable {
 
 	// Declaracion de tabla para mostrar elementos
 	@FXML private TableView<Libro> tablamostrarlibros; // Pagina vista libros
-	@FXML private TableColumn columnamostrarisbn; // Pagina vista libros
-	@FXML private TableColumn columnamostrartitulo; // Pagina vista libros
-	@FXML private TableColumn columnamostrarautores; // Pagina vista libros
+	@FXML private TableColumn<Libro, String> columnamostrarisbn; // Pagina vista libros
+	@FXML private TableColumn<Libro, String> columnamostrartitulo; // Pagina vista libros
+	@FXML private TableColumn<Libro, String> columnamostrarautores; // Pagina vista libros
 	ObservableList<Libro> tablaLibros; // Pagina vista libros
 
 	private int posicionTablaLibros; // Pagina vista libros
@@ -58,7 +63,6 @@ public class FXMLDocumentController implements Serializable {
 		libro.setISBN(insertarisbn.getText());
 		libro.setTitulo(insertartitulo.getText());
 		libro.setNombreAutores(insertarautores.getText());
-		libro.setEditorial(null);
 		libro.setNumPaginas(insertarnumerospaginas.getText());
 		tablaLibros.add(libro); // Añadimos los valores
 		// Borrar contenido de campos
@@ -68,6 +72,7 @@ public class FXMLDocumentController implements Serializable {
 		this.insertareditoriales.clear();
 		this.insertarnumerospaginas.clear();
 	}
+	
 	@FXML
 	private void guardarLibro(ActionEvent event) {
 		FileOutputStream fos;
@@ -83,6 +88,7 @@ public class FXMLDocumentController implements Serializable {
 			System.out.println(mensajeError);
 		}
 	}
+	
 	@FXML
 	private void limpiarRegistro(ActionEvent event) {
 		insertarisbn.clear();
@@ -91,13 +97,32 @@ public class FXMLDocumentController implements Serializable {
 		insertareditoriales.clear();
 		insertarnumerospaginas.clear();
 	}
+	
+	/*
+	 * INICIALIZACIÓN DE TABLAS
+	 */
+	private void iniciarTablaLibros() {
+		columnamostrarisbn.setCellValueFactory(new PropertyValueFactory<Libro,String>("ISBN"));
+		columnamostrartitulo.setCellValueFactory(new PropertyValueFactory<Libro,String>("titulo"));
+		columnamostrarautores.setCellValueFactory(new PropertyValueFactory<Libro,String>("nombreAutores"));
+		
+		ObservableList<Libro> lista = FXCollections.observableArrayList(
+				new Libro("0-3452-1245", "Prueba Libro", "Alejandro Ruiz", LocalDate.of(2021, 10, 21), "32", 1)
+				);
+		tablamostrarlibros.setItems(lista);
+		
+	}
+	
+	
+	
 
 	public FXMLDocumentController() {
 
 	}
 	@FXML
 	private void initialize() {
-
+		this.iniciarTablaLibros();
+		
 	}
 
 	@FXML

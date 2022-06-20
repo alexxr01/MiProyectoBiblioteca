@@ -14,7 +14,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.alejandro.recursos.FXMLDocumentController">
   <tabs>
     <Tab fx:id="registrolibros" text="Registro de libros">
       <content>
@@ -55,9 +55,9 @@
                   <Button fx:id="botonregistrarnuevolibro" layoutX="433.0" layoutY="331.0" mnemonicParsing="false" text="Registrar nuevo libro" />
                   <TableView fx:id="tablamostrarlibros" layoutX="15.0" layoutY="9.0" prefHeight="306.0" prefWidth="573.0">
                     <columns>
-                      <TableColumn fx:id="columnamostrarisbn" prefWidth="107.0" text="ISBN" />
-                      <TableColumn fx:id="columnamostrartitulo" prefWidth="170.0" text="Titulo" />
-                        <TableColumn fx:id="columnamostrarautores" prefWidth="295.0" text="Autores" />
+                      <TableColumn fx:id="columnamostrarisbn" prefWidth="139.0" text="ISBN" />
+                      <TableColumn fx:id="columnamostrartitulo" prefWidth="192.0" text="Titulo" />
+                        <TableColumn fx:id="columnamostrarautores" prefWidth="241.0" text="Autores" />
                     </columns>
                   </TableView>
                </children></AnchorPane>

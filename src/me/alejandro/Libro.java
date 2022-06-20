@@ -15,21 +15,19 @@ public class Libro {
 	private LocalDate fechaEdicion;
 	private String numPaginas;
 	private int tipoEncuadernacion;
-	private Editorial editorial;
 	
 	public Libro() {
 		
 	}
 	
 	public Libro(String ISBN, String titulo, String nombreAutores, LocalDate fechaEdicion, String numPaginas,
-			int tipoEncuadernacion, Editorial editorial) {
+			int tipoEncuadernacion) {
 		this.ISBN = ISBN;
 		this.titulo = titulo;
 		this.nombreAutores = nombreAutores;
 		this.fechaEdicion = fechaEdicion;
 		this.numPaginas = numPaginas;
 		this.tipoEncuadernacion = tipoEncuadernacion;
-		this.editorial = editorial;
 	}
 	
 	/*
@@ -53,9 +51,6 @@ public class Libro {
 	public int getTipoEncuadernacion() {
 		return tipoEncuadernacion;
 	}
-	public Editorial getEditorial() {
-		return editorial;
-	}
 	public void setISBN(String iSBN) {
 		ISBN = iSBN;
 	}
@@ -74,9 +69,6 @@ public class Libro {
 	public void setTipoEncuadernacion(int tipoEncuadernacion) {
 		this.tipoEncuadernacion = tipoEncuadernacion;
 	}
-	public void setEditorial(Editorial editorial) {
-		this.editorial = editorial;
-	}
 	
 	/*
 	 * TO STRING
@@ -85,7 +77,7 @@ public class Libro {
 	public String toString() {
 		return "Libro [ISBN=" + ISBN + ", titulo=" + titulo + ", nombreAutores=" + nombreAutores + ", fechaEdicion="
 				+ fechaEdicion + ", numPaginas=" + numPaginas + ", tipoEncuadernacion=" + tipoEncuadernacion
-				+ ", editorial_=" + editorial + "]";
+				+ "]";
 	}
 
 }
