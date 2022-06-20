@@ -31,7 +31,7 @@ public class Ejecucion extends Application {
 		stage.setTitle(titulo + " - " + "v" + version);
 		Image iconoVentana = new Image("/me/alejandro/recursos/icono.png");
 		stage.getIcons().add(iconoVentana);
-		stage.setResizable(true);
+		stage.setResizable(false);
 		
 		stage.setScene(scene);
 		stage.show();

@@ -120,8 +120,6 @@ public class FXMLDocumentController implements Serializable {
 	@FXML
 	private void initialize() {
 		this.iniciarTablaLibros();
-		
-		final ObservableList<Libro> tablaLibrosSeleccionar = tablamostrarlibros.getSelectionModel().getSelectedItems();
 	}
 
 	@FXML

@@ -14,37 +14,37 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.alejandro.recursos.FXMLDocumentController">
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="578.0" prefWidth="908.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.alejandro.recursos.FXMLDocumentController">
   <tabs>
     <Tab fx:id="registrolibros" text="Registro de libros">
       <content>
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                <children>
-                  <Label layoutX="51.0" layoutY="44.0" text="ISBN" />
-                  <Label layoutX="48.0" layoutY="90.0" text="Titulo" />
-                  <Label layoutX="50.0" layoutY="140.0" text="Autores" />
-                  <Label layoutX="48.0" layoutY="192.0" text="Fecha edicion" />
-                  <Label layoutX="48.0" layoutY="246.0" text="Editoriales" />
-                  <Label layoutX="48.0" layoutY="297.0" text="Numero de paginas" />
-                  <Button fx:id="botonaniadir" layoutX="392.0" layoutY="313.0" mnemonicParsing="false" text="➕ Añadir" />
-                  <Button fx:id="botonguardar" layoutX="474.0" layoutY="313.0" mnemonicParsing="false" text="💾 Guardar" />
-                  <TextField fx:id="insertarisbn" layoutX="122.0" layoutY="40.0" />
-                  <TextField fx:id="insertartitulo" layoutX="122.0" layoutY="86.0" />
-                  <TextField fx:id="insertarautores" layoutX="138.0" layoutY="136.0" />
-                  <TextField fx:id="insertareditoriales" layoutX="145.0" layoutY="242.0" />
-                  <TextField fx:id="insertarnumeropaginas" layoutX="208.0" layoutY="293.0" prefHeight="24.0" prefWidth="44.0" />
-                  <DatePicker fx:id="insertarfechaedicion" layoutX="168.0" layoutY="188.0" prefHeight="24.0" prefWidth="156.0" />
-                  <ImageView fitHeight="102.0" fitWidth="200.0" layoutX="373.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+                  <Label layoutX="67.0" layoutY="94.0" text="ISBN" />
+                  <Label layoutX="64.0" layoutY="150.0" text="Titulo" />
+                  <Label layoutX="64.0" layoutY="213.0" text="Autores" />
+                  <Label layoutX="64.0" layoutY="277.0" text="Fecha edicion" />
+                  <Label layoutX="67.0" layoutY="346.0" text="Editoriales" />
+                  <Label layoutX="67.0" layoutY="410.0" text="Numero de paginas" />
+                  <Button fx:id="botonaniadir" layoutX="561.0" layoutY="342.0" mnemonicParsing="false" text="➕ Añadir" />
+                  <Button fx:id="botonguardar" layoutX="657.0" layoutY="342.0" mnemonicParsing="false" text="💾 Guardar" />
+                  <TextField fx:id="insertarisbn" layoutX="131.0" layoutY="90.0" />
+                  <TextField fx:id="insertartitulo" layoutX="131.0" layoutY="146.0" />
+                  <TextField fx:id="insertarautores" layoutX="136.0" layoutY="209.0" />
+                  <TextField fx:id="insertareditoriales" layoutX="155.0" layoutY="342.0" />
+                  <TextField fx:id="insertarnumeropaginas" layoutX="219.0" layoutY="406.0" prefHeight="24.0" prefWidth="44.0" />
+                  <DatePicker fx:id="insertarfechaedicion" layoutX="179.0" layoutY="273.0" prefHeight="24.0" prefWidth="156.0" />
+                  <ImageView fitHeight="102.0" fitWidth="200.0" layoutX="550.0" layoutY="94.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@registro.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="119.0" fitWidth="103.0" layoutX="422.0" layoutY="109.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="119.0" fitWidth="103.0" layoutX="598.0" layoutY="182.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@firma.png" />
                      </image>
                   </ImageView>
-                  <Button fx:id="botonlimpiarcontenido" layoutX="264.0" layoutY="293.0" mnemonicParsing="false" text="Limpiar" />
+                  <Button fx:id="botonlimpiarcontenido" layoutX="274.0" layoutY="406.0" mnemonicParsing="false" text="Limpiar" />
                </children></AnchorPane>
       </content>
     </Tab>
@@ -52,14 +52,17 @@
       <content>
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                <children>
-                  <Button fx:id="botonregistrarnuevolibro" layoutX="413.0" layoutY="331.0" mnemonicParsing="false" text="🔙 Registrar nuevo libro" />
-                  <TableView fx:id="tablamostrarlibros" layoutX="15.0" layoutY="9.0" prefHeight="306.0" prefWidth="573.0">
+                  <Button fx:id="botonregistrarnuevolibro" layoutX="709.0" layoutY="407.0" mnemonicParsing="false" text="🔙 Registrar nuevo libro" />
+                  <TableView fx:id="tablamostrarlibros" layoutX="15.0" layoutY="9.0" prefHeight="521.0" prefWidth="663.0">
                     <columns>
-                      <TableColumn fx:id="columnamostrarisbn" prefWidth="139.0" text="ISBN" />
-                      <TableColumn fx:id="columnamostrartitulo" prefWidth="192.0" text="Titulo" />
-                        <TableColumn fx:id="columnamostrarautores" prefWidth="241.0" text="Autores" />
+                      <TableColumn fx:id="columnamostrarisbn" prefWidth="200.0" text="ISBN" />
+                      <TableColumn fx:id="columnamostrartitulo" prefWidth="228.0" text="Titulo" />
+                        <TableColumn fx:id="columnamostrarautores" prefWidth="236.0" text="Autores" />
                     </columns>
                   </TableView>
+                  <Button layoutX="760.0" layoutY="160.0" mnemonicParsing="false" text="Eliminar" />
+                  <Button layoutX="754.0" layoutY="201.0" mnemonicParsing="false" text="Actualizar" />
+                  <Text layoutX="767.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Acciones" />
                </children></AnchorPane>
       </content>
     </Tab>
@@ -67,14 +70,14 @@
          <content>
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                <children>
-                  <TableView fx:id="tablamostrareditoriales" layoutX="15.0" layoutY="9.0" prefHeight="195.0" prefWidth="573.0">
+                  <TableView fx:id="tablamostrareditoriales" layoutX="15.0" layoutY="9.0" prefHeight="376.0" prefWidth="879.0">
                      <columns>
-                        <TableColumn fx:id="columnamostrarcodigo" prefWidth="107.0" text="Codigo" />
-                        <TableColumn fx:id="columnamostrartelefono" prefWidth="170.0" text="Telefono" />
-                        <TableColumn fx:id="columnamostrarcorreo" prefWidth="295.0" text="Correo" />
+                        <TableColumn fx:id="columnamostrarcodigo" prefWidth="199.0" text="Codigo" />
+                        <TableColumn fx:id="columnamostrartelefono" prefWidth="265.0" text="Telefono" />
+                        <TableColumn fx:id="columnamostrarcorreo" prefWidth="414.0" text="Correo" />
                      </columns>
                   </TableView>
-                  <ImageView fitHeight="125.0" fitWidth="345.0" layoutX="128.0" layoutY="248.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="125.0" fitWidth="345.0" layoutX="306.0" layoutY="423.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@enconstruccion.png" />
                      </image>
@@ -87,20 +90,20 @@
         <content>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                <children>
-                  <Text layoutX="230.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Biblioteca v1.3.10">
+                  <Text layoutX="384.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Biblioteca v1.3.10">
                      <font>
                         <Font name="DejaVu Sans Mono Bold" size="13.0" />
                      </font>
                   </Text>
-                  <ImageView fitHeight="87.0" fitWidth="272.0" layoutX="164.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="87.0" fitWidth="272.0" layoutX="318.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@informacion.png" />
                      </image>
                   </ImageView>
-                  <Text layoutX="172.0" layoutY="164.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Desarrollado por Alejandro Ruiz Bonillo" />
-                  <Text layoutX="167.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ayuda proporcionada por Rafael Mendez" />
-                  <Text layoutX="182.0" layoutY="239.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Comienzo del proyecto: 15/06/2022" />
-                  <Text layoutX="189.0" layoutY="352.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Copyright® Biblioteca 2022-2023" />
+                  <Text layoutX="327.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Desarrollado por Alejandro Ruiz Bonillo" />
+                  <Text layoutX="321.0" layoutY="255.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ayuda proporcionada por Rafael Mendez" />
+                  <Text layoutX="337.0" layoutY="373.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Comienzo del proyecto: 15/06/2022" />
+                  <Text layoutX="344.0" layoutY="492.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Copyright® Biblioteca 2022-2023" />
                </children>
             </AnchorPane>
         </content>
