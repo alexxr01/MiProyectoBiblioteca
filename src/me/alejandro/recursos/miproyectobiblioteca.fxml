@@ -26,8 +26,8 @@
                   <Label layoutX="48.0" layoutY="192.0" text="Fecha edicion" />
                   <Label layoutX="48.0" layoutY="246.0" text="Editoriales" />
                   <Label layoutX="48.0" layoutY="297.0" text="Numero de paginas" />
-                  <Button fx:id="botonaniadir" layoutX="392.0" layoutY="313.0" mnemonicParsing="false" text="Añadir" />
-                  <Button fx:id="botonguardar" layoutX="474.0" layoutY="313.0" mnemonicParsing="false" text="Guardar" />
+                  <Button fx:id="botonaniadir" layoutX="392.0" layoutY="313.0" mnemonicParsing="false" text="➕ Añadir" />
+                  <Button fx:id="botonguardar" layoutX="474.0" layoutY="313.0" mnemonicParsing="false" text="💾 Guardar" />
                   <TextField fx:id="insertarisbn" layoutX="122.0" layoutY="40.0" />
                   <TextField fx:id="insertartitulo" layoutX="122.0" layoutY="86.0" />
                   <TextField fx:id="insertarautores" layoutX="138.0" layoutY="136.0" />
@@ -52,7 +52,7 @@
       <content>
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                <children>
-                  <Button fx:id="botonregistrarnuevolibro" layoutX="433.0" layoutY="331.0" mnemonicParsing="false" text="Registrar nuevo libro" />
+                  <Button fx:id="botonregistrarnuevolibro" layoutX="413.0" layoutY="331.0" mnemonicParsing="false" text="🔙 Registrar nuevo libro" />
                   <TableView fx:id="tablamostrarlibros" layoutX="15.0" layoutY="9.0" prefHeight="306.0" prefWidth="573.0">
                     <columns>
                       <TableColumn fx:id="columnamostrarisbn" prefWidth="139.0" text="ISBN" />
@@ -67,13 +67,18 @@
          <content>
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                <children>
-                  <TableView fx:id="tablamostrareditoriales" layoutX="15.0" layoutY="9.0" prefHeight="346.0" prefWidth="573.0">
+                  <TableView fx:id="tablamostrareditoriales" layoutX="15.0" layoutY="9.0" prefHeight="195.0" prefWidth="573.0">
                      <columns>
                         <TableColumn fx:id="columnamostrarcodigo" prefWidth="107.0" text="Codigo" />
                         <TableColumn fx:id="columnamostrartelefono" prefWidth="170.0" text="Telefono" />
                         <TableColumn fx:id="columnamostrarcorreo" prefWidth="295.0" text="Correo" />
                      </columns>
                   </TableView>
+                  <ImageView fitHeight="125.0" fitWidth="345.0" layoutX="128.0" layoutY="248.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@enconstruccion.png" />
+                     </image>
+                  </ImageView>
                </children>
             </AnchorPane>
          </content>

@@ -39,7 +39,6 @@ public class FXMLDocumentController implements Serializable {
 	@FXML private TextField insertarisbn; // Pagina principal
 	@FXML private TextField insertartitulo; // Pagina principal
 	@FXML private TextField insertarautores; // Pagina principal
-	@FXML private TextField insertareditoriales; // Pagina principal
 	@FXML private TextField insertarnumerospaginas; // Pagina principal
 
 	// Declaracion de campos de fecha en nuestro programa
@@ -63,14 +62,14 @@ public class FXMLDocumentController implements Serializable {
 		libro.setISBN(insertarisbn.getText());
 		libro.setTitulo(insertartitulo.getText());
 		libro.setNombreAutores(insertarautores.getText());
-		libro.setNumPaginas(insertarnumerospaginas.getText());
+		libro.setFechaEdicion(insertarfechaedicion.getValue());
+		libro.setNumPaginas(insertarnumerospaginas.getAnchor());
 		tablaLibros.add(libro); // Añadimos los valores
-		// Borrar contenido de campos
 		this.insertarisbn.clear();
 		this.insertartitulo.clear();
 		this.insertarautores.clear();
-		this.insertareditoriales.clear();
 		this.insertarnumerospaginas.clear();
+		botonaniadir.setDisable(false);
 	}
 	
 	@FXML
@@ -94,7 +93,6 @@ public class FXMLDocumentController implements Serializable {
 		insertarisbn.clear();
 		insertartitulo.clear();
 		insertarautores.clear();
-		insertareditoriales.clear();
 		insertarnumerospaginas.clear();
 	}
 	
@@ -107,7 +105,7 @@ public class FXMLDocumentController implements Serializable {
 		columnamostrarautores.setCellValueFactory(new PropertyValueFactory<Libro,String>("nombreAutores"));
 		
 		ObservableList<Libro> lista = FXCollections.observableArrayList(
-				new Libro("0-3452-1245", "Prueba Libro", "Alejandro Ruiz", LocalDate.of(2021, 10, 21), "32", 1)
+				new Libro("0-3452-1245", "Prueba Libro", "Prueba Autor", LocalDate.of(2021, 10, 21), 32, 1)
 				);
 		tablamostrarlibros.setItems(lista);
 		
@@ -123,6 +121,7 @@ public class FXMLDocumentController implements Serializable {
 	private void initialize() {
 		this.iniciarTablaLibros();
 		
+		final ObservableList<Libro> tablaLibrosSeleccionar = tablamostrarlibros.getSelectionModel().getSelectedItems();
 	}
 
 	@FXML
