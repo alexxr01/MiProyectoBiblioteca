@@ -111,8 +111,9 @@ public class FXMLDocumentController implements Serializable {
 			Transformer transformer = transformerFactory.newTransformer();
 			DOMSource domSource = new DOMSource(document);
 			StreamResult streamResult = new StreamResult(new File(almacenamiento));
-
 			transformer.transform(domSource, streamResult);
+			
+			tablamostrarlibros.refresh();
 			System.out.println("Archivo XML creado y actualizado correctamente.");
 
 		} catch (Exception e) {
@@ -166,9 +167,9 @@ public class FXMLDocumentController implements Serializable {
 		documento.getDocumentElement().normalize();
 		ObservableList<Libro> lista = FXCollections.observableArrayList();
 		NodeList nodeList = documento.getElementsByTagName("libro");
-		Libro libro = new Libro();
-
+		
 		for(int i = 0; i < nodeList.getLength(); i++) {
+			Libro libro = new Libro();
 			Node nNode = nodeList.item(i);
 			System.out.println("\nElemento actual: " +
 					nNode.getNodeName());
