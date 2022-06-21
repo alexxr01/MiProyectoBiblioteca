@@ -52,36 +52,21 @@
       <content>
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                <children>
-                  <TableView fx:id="tablamostrarlibros" layoutX="15.0" layoutY="9.0" prefHeight="521.0" prefWidth="879.0">
+                  <TableView fx:id="tablamostrarlibros" layoutX="15.0" layoutY="61.0" prefHeight="469.0" prefWidth="879.0">
                     <columns>
-                      <TableColumn fx:id="columnamostrarisbn" prefWidth="247.0" text="ISBN" />
-                      <TableColumn fx:id="columnamostrartitulo" prefWidth="332.0" text="Titulo" />
-                        <TableColumn fx:id="columnamostrarautores" prefWidth="298.0" text="Autores" />
+                      <TableColumn fx:id="columnamostrarisbn" prefWidth="277.0" text="ISBN" />
+                      <TableColumn fx:id="columnamostrartitulo" prefWidth="322.0" text="Titulo" />
+                        <TableColumn fx:id="columnamostrarautores" prefWidth="278.0" text="Autores" />
                     </columns>
                   </TableView>
+                  <ImageView fitHeight="48.0" fitWidth="229.0" layoutX="340.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@listadelibros.png" />
+                     </image>
+                  </ImageView>
                </children></AnchorPane>
       </content>
     </Tab>
-      <Tab fx:id="mostrareditoriales" text="Editoriales">
-         <content>
-            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-               <children>
-                  <TableView fx:id="tablamostrareditoriales" layoutX="15.0" layoutY="9.0" prefHeight="376.0" prefWidth="879.0">
-                     <columns>
-                        <TableColumn fx:id="columnamostrarcodigo" prefWidth="199.0" text="Codigo" />
-                        <TableColumn fx:id="columnamostrartelefono" prefWidth="265.0" text="Telefono" />
-                        <TableColumn fx:id="columnamostrarcorreo" prefWidth="414.0" text="Correo" />
-                     </columns>
-                  </TableView>
-                  <ImageView fitHeight="125.0" fitWidth="345.0" layoutX="306.0" layoutY="423.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@enconstruccion.png" />
-                     </image>
-                  </ImageView>
-               </children>
-            </AnchorPane>
-         </content>
-      </Tab>
       <Tab fx:id="mostrarinformacion" text="Informacion">
         <content>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">

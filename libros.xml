@@ -1,1 +1,33 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><libros><libro><isbn>Hola</isbn><titulo>Hola</titulo><autores>Hola</autores></libro></libros>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<libros>
+	<libro>
+		<isbn>00-3564-234346</isbn>
+		<titulo>El programita interminable</titulo>
+		<autores>Alejandro Ruiz</autores>
+	</libro>
+	<libro>
+		<isbn>44-6643-46336</isbn>
+		<titulo>El Lazarillo de Tormes</titulo>
+		<autores>Diego Hurtado de Mendoza</autores>
+	</libro>
+	<libro>
+		<isbn>23-7832-36754</isbn>
+		<titulo>Odisea</titulo>
+		<autores>Homero</autores>
+	</libro>
+	<libro>
+		<isbn>11-34458-54567</isbn>
+		<titulo>Historia de la vida del Buscón</titulo>
+		<autores>Francisco de Quevedo</autores>
+	</libro>
+	<libro>
+		<isbn>08-44677-43465</isbn>
+		<titulo>Eneida</titulo>
+		<autores>Virgilio</autores>
+	</libro>
+	<libro>
+		<isbn>33-46775-23455</isbn>
+		<titulo>Diseño ecológico. 1000 ejemplos</titulo>
+		<autores>Rebecca Proctor</autores>
+	</libro>
+</libros>
