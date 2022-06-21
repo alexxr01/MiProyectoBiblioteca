@@ -152,8 +152,8 @@ public class FXMLDocumentController implements Serializable {
 						.item(0)
 						.getTextContent());
 			}
+			lista.add(libro);
 		}
-		lista.add(libro);
 		tablamostrarlibros.setItems(lista);
 
 	}
