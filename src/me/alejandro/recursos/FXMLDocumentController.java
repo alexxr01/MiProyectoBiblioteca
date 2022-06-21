@@ -88,23 +88,23 @@ public class FXMLDocumentController implements Serializable {
 			Element root = document.createElement("libros");
 			document.appendChild(root);
 
-			Element employee = document.createElement("libro");
-			root.appendChild(employee);
+			Element elementoLibro = document.createElement("libro");
+			root.appendChild(elementoLibro);
 
 			// Insersión del ISBN
 			Element isbn = document.createElement("isbn");
 			isbn.appendChild(document.createTextNode(libro.getISBN()));
-			employee.appendChild(isbn);
+			elementoLibro.appendChild(isbn);
 
 			// Insersión del título
 			Element titulo = document.createElement("titulo");
 			titulo.appendChild(document.createTextNode(libro.getTitulo()));
-			employee.appendChild(titulo);
+			elementoLibro.appendChild(titulo);
 
 			// Insersión de autores
 			Element autores = document.createElement("autores");
 			autores.appendChild(document.createTextNode(libro.getNombreAutores()));
-			employee.appendChild(autores);
+			elementoLibro.appendChild(autores);
 
 			// Almacenamiento del archivo XML
 			TransformerFactory transformerFactory = TransformerFactory.newInstance();
@@ -167,7 +167,7 @@ public class FXMLDocumentController implements Serializable {
 		documento.getDocumentElement().normalize();
 		ObservableList<Libro> lista = FXCollections.observableArrayList();
 		NodeList nodeList = documento.getElementsByTagName("libro");
-		
+
 		for(int i = 0; i < nodeList.getLength(); i++) {
 			Libro libro = new Libro();
 			Node nNode = nodeList.item(i);

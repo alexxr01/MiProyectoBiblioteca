@@ -27,7 +27,7 @@
                   <Label layoutX="67.0" layoutY="346.0" text="Editoriales" />
                   <Label layoutX="67.0" layoutY="410.0" text="Numero de paginas" />
                   <Button fx:id="botonaniadir" layoutX="575.0" layoutY="342.0" mnemonicParsing="false" onAction="#aniadirLibro" text="➕ Añadir" />
-                  <Button fx:id="botonsalir" layoutX="664.0" layoutY="342.0" mnemonicParsing="false" onAction="#accionBotonSalir" text="❌ Salir" />
+                  <Button fx:id="botonsalir" layoutX="671.0" layoutY="342.0" mnemonicParsing="false" onAction="#accionBotonSalir" text="🚪 Salir" />
                   <TextField fx:id="insertarisbn" layoutX="131.0" layoutY="90.0" />
                   <TextField fx:id="insertartitulo" layoutX="131.0" layoutY="146.0" />
                   <TextField fx:id="insertarautores" layoutX="136.0" layoutY="209.0" />
@@ -85,6 +85,7 @@
                   <Text layoutX="321.0" layoutY="255.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ayuda proporcionada por Rafael Mendez" />
                   <Text layoutX="337.0" layoutY="373.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Comienzo del proyecto: 15/06/2022" />
                   <Text layoutX="344.0" layoutY="492.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Copyright® Biblioteca 2022-2023" />
+                  <Text layoutX="331.0" layoutY="395.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Finalizacion del proyecto: 21/06/2022" />
                </children>
             </AnchorPane>
         </content>

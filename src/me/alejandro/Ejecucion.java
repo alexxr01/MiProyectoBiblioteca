@@ -40,7 +40,7 @@ public class Ejecucion extends Application {
 	public static void main(String[] args) {
 		System.out.println("El programa se está ejecutando...");
 		launch();
-		System.out.println("Ha salido del programa exitosamente.");
+		System.out.println("\n\nHa salido del programa exitosamente.\nVuelva pronto!");
 	}
 
 }
