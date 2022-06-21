@@ -79,7 +79,7 @@ public class FXMLDocumentController implements Serializable {
 		libro.setNombreAutores(insertarautores.getText());
 		libro.setFechaEdicion(insertarfechaedicion.getValue());
 		botonaniadir.setDisable(false);
-		
+
 		try {
 			DocumentBuilderFactory documentFactory = DocumentBuilderFactory.newInstance();
 			DocumentBuilder documentBuilder = documentFactory.newDocumentBuilder();
@@ -87,38 +87,38 @@ public class FXMLDocumentController implements Serializable {
 
 			Element root = document.createElement("libros");
 			document.appendChild(root);
-			
+
 			Element employee = document.createElement("libro");
 			root.appendChild(employee);
-			
+
 			// Insersión del ISBN
-            Element isbn = document.createElement("isbn");
-            isbn.appendChild(document.createTextNode(libro.getISBN()));
-            employee.appendChild(isbn);
- 
-            // Insersión del título
-            Element titulo = document.createElement("titulo");
-            titulo.appendChild(document.createTextNode(libro.getTitulo()));
-            employee.appendChild(titulo);
- 
-            // Insersión de autores
-            Element autores = document.createElement("autores");
-            autores.appendChild(document.createTextNode(libro.getNombreAutores()));
-            employee.appendChild(autores);
-            
-            // Almacenamiento del archivo XML
-            TransformerFactory transformerFactory = TransformerFactory.newInstance();
-            Transformer transformer = transformerFactory.newTransformer();
-            DOMSource domSource = new DOMSource(document);
-            StreamResult streamResult = new StreamResult(new File(almacenamiento));
-            
-            transformer.transform(domSource, streamResult);
-            System.out.println("Archivo XML creado y actualizado correctamente.");
-            
+			Element isbn = document.createElement("isbn");
+			isbn.appendChild(document.createTextNode(libro.getISBN()));
+			employee.appendChild(isbn);
+
+			// Insersión del título
+			Element titulo = document.createElement("titulo");
+			titulo.appendChild(document.createTextNode(libro.getTitulo()));
+			employee.appendChild(titulo);
+
+			// Insersión de autores
+			Element autores = document.createElement("autores");
+			autores.appendChild(document.createTextNode(libro.getNombreAutores()));
+			employee.appendChild(autores);
+
+			// Almacenamiento del archivo XML
+			TransformerFactory transformerFactory = TransformerFactory.newInstance();
+			Transformer transformer = transformerFactory.newTransformer();
+			DOMSource domSource = new DOMSource(document);
+			StreamResult streamResult = new StreamResult(new File(almacenamiento));
+
+			transformer.transform(domSource, streamResult);
+			System.out.println("Archivo XML creado y actualizado correctamente.");
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		 
+
 	}
 
 	/*	NO UTILIZADO
