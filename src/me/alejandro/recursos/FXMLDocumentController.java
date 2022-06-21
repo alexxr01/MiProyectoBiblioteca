@@ -31,7 +31,7 @@ public class FXMLDocumentController implements Serializable {
 	private static final long serialVersionUID = 1L;
 	// Declaracion de botones en nuestro programa
 	@FXML private Button botonaniadir; // Pagina principal
-	@FXML private Button botonguardar; // Pagina principal
+	@FXML private Button botonsalir; // Pagina principal
 	@FXML private Button botonlimpiarcontenido; // Pagina principal
 	@FXML private Button botonregistrarnuevolibro; // Pagina vista libros
 
@@ -50,8 +50,6 @@ public class FXMLDocumentController implements Serializable {
 	@FXML private TableColumn<Libro, String> columnamostrartitulo; // Pagina vista libros
 	@FXML private TableColumn<Libro, String> columnamostrarautores; // Pagina vista libros
 	ObservableList<Libro> tablaLibros; // Pagina vista libros
-
-	private int posicionTablaLibros; // Pagina vista libros
 
 	/*
 	 * ACCIONES DE BOTONES
@@ -99,7 +97,7 @@ public class FXMLDocumentController implements Serializable {
 	/*
 	 * INICIALIZACIÓN DE TABLAS
 	 */
-	private void iniciarTablaLibros() {
+	private void tablaLibros() {		
 		columnamostrarisbn.setCellValueFactory(new PropertyValueFactory<Libro,String>("ISBN"));
 		columnamostrartitulo.setCellValueFactory(new PropertyValueFactory<Libro,String>("titulo"));
 		columnamostrarautores.setCellValueFactory(new PropertyValueFactory<Libro,String>("nombreAutores"));
@@ -119,7 +117,7 @@ public class FXMLDocumentController implements Serializable {
 	}
 	@FXML
 	private void initialize() {
-		this.iniciarTablaLibros();
+		this.tablaLibros();
 	}
 
 	@FXML

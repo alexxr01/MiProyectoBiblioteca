@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="11.0.15" class="java.beans.XMLDecoder">
+ <object class="me.alejandro.Libro">
+  <void property="ISBN">
+   <string>0-3452-1245</string>
+  </void>
+  <void property="nombreAutores">
+   <string>Prueba Autor</string>
+  </void>
+  <void property="numPaginas">
+   <int>32</int>
+  </void>
+  <void property="tipoEncuadernacion">
+   <int>1</int>
+  </void>
+  <void property="titulo">
+   <string>Nueva implementacion</string>
+  </void>
+ </object>
+</java>

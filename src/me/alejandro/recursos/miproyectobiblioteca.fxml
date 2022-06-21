@@ -26,8 +26,8 @@
                   <Label layoutX="64.0" layoutY="277.0" text="Fecha edicion" />
                   <Label layoutX="67.0" layoutY="346.0" text="Editoriales" />
                   <Label layoutX="67.0" layoutY="410.0" text="Numero de paginas" />
-                  <Button fx:id="botonaniadir" layoutX="561.0" layoutY="342.0" mnemonicParsing="false" text="➕ Añadir" />
-                  <Button fx:id="botonguardar" layoutX="657.0" layoutY="342.0" mnemonicParsing="false" text="💾 Guardar" />
+                  <Button fx:id="botonaniadir" layoutX="575.0" layoutY="342.0" mnemonicParsing="false" text="➕ Añadir" />
+                  <Button fx:id="botonsalir" layoutX="664.0" layoutY="342.0" mnemonicParsing="false" text="❌ Salir" />
                   <TextField fx:id="insertarisbn" layoutX="131.0" layoutY="90.0" />
                   <TextField fx:id="insertartitulo" layoutX="131.0" layoutY="146.0" />
                   <TextField fx:id="insertarautores" layoutX="136.0" layoutY="209.0" />
