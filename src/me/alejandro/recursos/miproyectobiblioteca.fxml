@@ -26,8 +26,8 @@
                   <Label layoutX="64.0" layoutY="277.0" text="Fecha edicion" />
                   <Label layoutX="67.0" layoutY="346.0" text="Editoriales" />
                   <Label layoutX="67.0" layoutY="410.0" text="Numero de paginas" />
-                  <Button fx:id="botonaniadir" layoutX="575.0" layoutY="342.0" mnemonicParsing="false" text="➕ Añadir" />
-                  <Button fx:id="botonsalir" layoutX="664.0" layoutY="342.0" mnemonicParsing="false" text="❌ Salir" />
+                  <Button fx:id="botonaniadir" layoutX="575.0" layoutY="342.0" mnemonicParsing="false" onAction="#aniadirLibro" text="➕ Añadir" />
+                  <Button fx:id="botonsalir" layoutX="664.0" layoutY="342.0" mnemonicParsing="false" onAction="#accionBotonSalir" text="❌ Salir" />
                   <TextField fx:id="insertarisbn" layoutX="131.0" layoutY="90.0" />
                   <TextField fx:id="insertartitulo" layoutX="131.0" layoutY="146.0" />
                   <TextField fx:id="insertarautores" layoutX="136.0" layoutY="209.0" />
@@ -44,7 +44,7 @@
                         <Image url="@firma.png" />
                      </image>
                   </ImageView>
-                  <Button fx:id="botonlimpiarcontenido" layoutX="274.0" layoutY="406.0" mnemonicParsing="false" text="Limpiar" />
+                  <Button fx:id="botonlimpiarcontenido" layoutX="274.0" layoutY="406.0" mnemonicParsing="false" onAction="#limpiarRegistro" text="Limpiar" />
                </children></AnchorPane>
       </content>
     </Tab>
@@ -52,17 +52,13 @@
       <content>
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                <children>
-                  <Button fx:id="botonregistrarnuevolibro" layoutX="709.0" layoutY="407.0" mnemonicParsing="false" text="🔙 Registrar nuevo libro" />
-                  <TableView fx:id="tablamostrarlibros" layoutX="15.0" layoutY="9.0" prefHeight="521.0" prefWidth="663.0">
+                  <TableView fx:id="tablamostrarlibros" layoutX="15.0" layoutY="9.0" prefHeight="521.0" prefWidth="879.0">
                     <columns>
-                      <TableColumn fx:id="columnamostrarisbn" prefWidth="200.0" text="ISBN" />
-                      <TableColumn fx:id="columnamostrartitulo" prefWidth="228.0" text="Titulo" />
-                        <TableColumn fx:id="columnamostrarautores" prefWidth="236.0" text="Autores" />
+                      <TableColumn fx:id="columnamostrarisbn" prefWidth="247.0" text="ISBN" />
+                      <TableColumn fx:id="columnamostrartitulo" prefWidth="332.0" text="Titulo" />
+                        <TableColumn fx:id="columnamostrarautores" prefWidth="298.0" text="Autores" />
                     </columns>
                   </TableView>
-                  <Button layoutX="760.0" layoutY="160.0" mnemonicParsing="false" text="Eliminar" />
-                  <Button layoutX="754.0" layoutY="201.0" mnemonicParsing="false" text="Actualizar" />
-                  <Text layoutX="767.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Acciones" />
                </children></AnchorPane>
       </content>
     </Tab>

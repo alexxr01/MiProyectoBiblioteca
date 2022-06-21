@@ -6,11 +6,19 @@ package me.alejandro.recursos;
  * @version 1.0
  */
 
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.time.LocalDate;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -22,11 +30,12 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 import me.alejandro.Libro;
 
 public class FXMLDocumentController implements Serializable {
+	private String localizacionArchivoXMLLibros = "/me/alejandro/recursos/almacenamiento/libros.xml";
 	private final String mensajeError = "Ha ocurrido algún error...";
-	private Libro[] libros;
 
 	private static final long serialVersionUID = 1L;
 	// Declaracion de botones en nuestro programa
@@ -63,19 +72,16 @@ public class FXMLDocumentController implements Serializable {
 		libro.setFechaEdicion(insertarfechaedicion.getValue());
 		libro.setNumPaginas(insertarnumerospaginas.getAnchor());
 		tablaLibros.add(libro); // Añadimos los valores
-		this.insertarisbn.clear();
-		this.insertartitulo.clear();
-		this.insertarautores.clear();
-		this.insertarnumerospaginas.clear();
 		botonaniadir.setDisable(false);
 	}
-	
+
+	/*	NO UTILIZADO
 	@FXML
 	private void guardarLibro(ActionEvent event) {
 		FileOutputStream fos;
 		ObjectOutputStream oos = null;
 		try {
-			fos = new FileOutputStream("libros.xml");
+			fos = new FileOutputStream("/me/alejandro/recursos/libros.xml");
 			oos = new ObjectOutputStream(fos);
 			for (int i = 0; i < this.libros.length ; i++) {
 				oos.writeObject(libros[i]);
@@ -84,45 +90,82 @@ public class FXMLDocumentController implements Serializable {
 			e.printStackTrace();
 			System.out.println(mensajeError);
 		}
-	}
+	} */
 	
 	@FXML
-	private void limpiarRegistro(ActionEvent event) {
-		insertarisbn.clear();
-		insertartitulo.clear();
-		insertarautores.clear();
-		insertarnumerospaginas.clear();
+	private void accionBotonSalir() {
+	    Stage stage = (Stage) botonsalir.getScene().getWindow();
+	    stage.close();
 	}
-	
+	@FXML
+	private void limpiarRegistro() {
+		this.insertarisbn.clear();
+		this.insertartitulo.clear();
+		this.insertarautores.clear();
+		this.insertarnumerospaginas.clear();
+	}
+
 	/*
 	 * INICIALIZACIÓN DE TABLAS
 	 */
-	private void tablaLibros() {		
+	private void tablaLibros() throws ParserConfigurationException, SAXException, IOException {
+		
 		columnamostrarisbn.setCellValueFactory(new PropertyValueFactory<Libro,String>("ISBN"));
 		columnamostrartitulo.setCellValueFactory(new PropertyValueFactory<Libro,String>("titulo"));
 		columnamostrarautores.setCellValueFactory(new PropertyValueFactory<Libro,String>("nombreAutores"));
+		 
+		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+		DocumentBuilder builder = factory.newDocumentBuilder();
+		Document documento = builder.parse(localizacionArchivoXMLLibros);
+		documento.getDocumentElement().normalize();
+		ObservableList<Libro> lista = FXCollections.observableArrayList();
+		NodeList nodeList = documento.getElementsByTagName("libro");
+		Libro libro = new Libro();
 		
-		ObservableList<Libro> lista = FXCollections.observableArrayList(
-				new Libro("0-3452-1245", "Prueba Libro", "Prueba Autor", LocalDate.of(2021, 10, 21), 32, 1)
-				);
+		for(int i = 0; i < nodeList.getLength(); i++) {
+			Node nNode = nodeList.item(i);
+			System.out.println("\nElemento actual: " +
+					nNode.getNodeName());
+
+			if (nNode.getNodeType() == Node.ELEMENT_NODE) {
+				Element element = (Element) nNode;
+				
+				// Mostrar ISBN
+				libro.setISBN(element.getElementsByTagName("isbn")
+						.item(0)
+						.getTextContent());
+				System.out.println(element.getElementsByTagName("isbn")
+						.item(0)
+						.getTextContent());
+				// Mostrar Titulos
+				libro.setTitulo(element.getElementsByTagName("titulo")
+						.item(0)
+						.getTextContent());
+				System.out.println(element.getElementsByTagName("titulo")
+						.item(0)
+						.getTextContent());
+				// Mostrar Autores
+				libro.setNombreAutores(element.getElementsByTagName("autores")
+						.item(0)
+						.getTextContent());
+				System.out.println(element.getElementsByTagName("autores")
+						.item(0)
+						.getTextContent());
+			}
+		}
+		lista.add(libro);
 		tablamostrarlibros.setItems(lista);
-		
-	}
-	
-	
-	
-
-	public FXMLDocumentController() {
 
 	}
+	
 	@FXML
 	private void initialize() {
-		this.tablaLibros();
-	}
-
-	@FXML
-	private void enviarDatos() {
-		this.enviarDatos();
+		try {
+			this.tablaLibros();
+		} catch (ParserConfigurationException | SAXException | IOException e) {
+			e.printStackTrace();
+			System.out.println(mensajeError);
+		}
 	}
 
 }

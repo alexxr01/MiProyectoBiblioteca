@@ -1,5 +1,7 @@
 package me.alejandro;
 
+import java.io.Serializable;
+
 /**
  * Propiedades necesarias para un libro
  * @author Alejandro Ruiz Bonillo
@@ -8,7 +10,8 @@ package me.alejandro;
 
 import java.time.LocalDate;
 
-public class Libro {
+public class Libro implements Serializable {
+	private static final long serialVersionUID = 1L;
 	private String ISBN;
 	private String titulo;
 	private String nombreAutores;
