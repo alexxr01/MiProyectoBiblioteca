@@ -52,7 +52,7 @@
       <content>
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                <children>
-                  <TableView fx:id="tablamostrarlibros" layoutX="15.0" layoutY="61.0" prefHeight="469.0" prefWidth="879.0">
+                  <TableView fx:id="tablamostrarlibros" layoutX="15.0" layoutY="61.0" prefHeight="442.0" prefWidth="879.0">
                     <columns>
                       <TableColumn fx:id="columnamostrarisbn" prefWidth="277.0" text="ISBN" />
                       <TableColumn fx:id="columnamostrartitulo" prefWidth="322.0" text="Titulo" />
@@ -64,6 +64,7 @@
                         <Image url="@listadelibros.png" />
                      </image>
                   </ImageView>
+                  <Text layoutX="230.0" layoutY="530.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mostrando una lista de elementos recogidos del archivo: &quot;libros.xml&quot;" />
                </children></AnchorPane>
       </content>
     </Tab>

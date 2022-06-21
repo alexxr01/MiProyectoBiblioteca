@@ -114,7 +114,8 @@ public class FXMLDocumentController implements Serializable {
 			transformer.transform(domSource, streamResult);
 			
 			tablamostrarlibros.refresh();
-			System.out.println("Archivo XML creado y actualizado correctamente.");
+			System.out.println("Archivo XML actualizado y guardado correctamente.");
+			System.out.println("Por favor, reinicie el programa para ver los cambios.");
 
 		} catch (Exception e) {
 			e.printStackTrace();
